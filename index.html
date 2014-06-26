@@ -33,7 +33,40 @@
         <p>This is a simple hack for fun and learning.  Specifically, we're tweaking figures from the textbook "Machine learning, statistics, and data mining for astronomy and astrophysics"
         	Contact gully at gully@astro.as.utexas.edu </p>
 
+		<p>Here's how much time is left in the hack day!</p>
+
+<style>
+
+#countdown {
+  font: 40px/200px Menlo;
+  text-align: left;
+  width: 360px;
+}
+
+</style>
+<div id="countdown"></div>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+
+var formatTime = d3.time.format("T-%X"),
+    countdown = d3.select("#countdown"),
+    today = d3.time.day(new Date);
+
+// 9 AM tomorrow
+var deadline = d3.time.day.offset(today, 0);
+deadline.setHours(17);
+
+(function tick() {
+  var now = new Date;
+  countdown.text(formatTime(new Date(+today + +deadline - d3.time.second(now))));
+  setTimeout(tick, 1000 - now % 1000);
+})();
+
+</script>
+
 	<p> Here is a cool figure:	<IMG SRC="images/pplLineCov.png" ALT="Awesome Matrix Math Abounds" align="right"> </p>
+
+
 
       </section>
       <footer>
