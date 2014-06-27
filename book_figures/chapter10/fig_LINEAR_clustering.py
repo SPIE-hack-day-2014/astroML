@@ -23,6 +23,7 @@ light-curve amplitude diagram for the same clusters are shown in the lower
 panels of figure 10.20.
 """
 # Author: Jake VanderPlas
+# Edited by MGS on Thursday June 26, 2014
 # License: BSD
 #   The figure produced by this code is published in the textbook
 #   "Statistics, Data Mining, and Machine Learning in Astronomy" (2013)
